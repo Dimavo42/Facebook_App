@@ -74,8 +74,8 @@ namespace MyUser
         public void Login()
         {
             LoginResult logingResult = FacebookService.Login(
-                   // "6228438060527646",
-                   "799553048113660",
+                   
+                   "YourFaceBookLoginID",
                    "email",
                    "public_profile",
                    "user_age_range",
@@ -138,7 +138,7 @@ namespace MyUser
 
         private HttpResponseMessage getResponseMessage(string i_UserLocation)
         {
-            string apiKey = "50cad8393c3638bae1892f68ca760835";
+            string apiKey = "YourApIKEY";
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = client.GetAsync($"http://api.openweathermap.org/data/2.5/weather?q={i_UserLocation}&units=metric&appid={apiKey}").Result;
